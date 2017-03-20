@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0"
+                 xmlns="http://java.sun.com/xml/ns/persistence/orm"
+                 xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd "
+>
+    <named-query name="Website.getByUserId">
+        <query>
+            SELECT
+            website
+            FROM
+            Website website
+            WHERE
+            website.userId = :userId
+        </query>
+    </named-query>
+
+    <named-query name="Website.foobar">
+        <query>
+            ...
+        </query>
+    </named-query>
+
+</named-query>
+        </entity-mappings>
