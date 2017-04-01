@@ -1,0 +1,35 @@
+.gitignore
+# Compiled source #
+*.class
+*/bin/*
+
+# Eclipse files
+.project
+.classpath
+.settings
+.metadata
+.checkstyle
+
+# Packages
+*.jar
+
+# Maven build files
+target
+reports
+test-output
+# ARQ tests
+arq-perf
+
+# PMD
+.pmd
+
+#Generated files
+*.ser
+
+#IntelliJ files
+.idea
+*.iml
+*.eml
+
+# Merge files
+*.orig

@@ -112,6 +112,8 @@
     </dependencyManagement>
 
     <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <testSourceDirectory>src/test/java</testSourceDirectory>
         <plugins>
             <!-- The JBoss AS plugin deploys your apps to a local JBoss AS container -->
             <!-- Disabling it here means that we don't try to deploy this POM! -->
@@ -185,6 +187,10 @@
                 <module>cdi-portable-extension</module>
                 <module>cdi-stereotype</module>
                 <module>cdi-veto</module>
+                <module>cluster-client-example</module>
+                <module>cluster-example</module>
+                <module>dmr-example</module>
+                <module>dist</module>
                 <module>ejb-asynchronous</module>
                 <module>ejb-in-ear</module>
                 <module>ejb-in-war</module>
@@ -195,6 +201,10 @@
                 <module>ejb-throws-exception</module>
                 <module>ejb-timer</module>
                 <module>ejb-multi-server</module>
+                <module>ejb-cmt-example</module>
+                <module>ejb-remote-example</module>
+                <module>ejb-security-example</module>
+                <module>ejb-singelton-example</module>
                 <module>greeter</module>
                 <module>helloworld</module>
                 <module>helloworld-jms</module>
@@ -208,21 +218,14 @@
                 <module>hibernate4</module>
                 <module>hibernate5</module>
                 <module>hibernate-search</module>
-                <module>cluster-client-example</module>
-                <module>cluster-example</module>
-                <module>log4j-logging</module>
                 <module>jboss-logging</module>
+                <module>jpa</module>
+                <module>log4j-logging</module>
                 <module>logging-tools</module>
                 <module>mail</module>
                 <module>numberguess</module>
                 <module>payment-cdi-event</module>
                 <module>wicket-ear</module>
-                <module>dmr-example</module>
-                <module>ejb-cmt-example</module>
-                <module>ejb-remote-example</module>
-                <module>ejb-security-example</module>
-                <module>ejb-singelton-example</module>
-                <module>wsat-simple</module>
             </modules>
         </profile>
 

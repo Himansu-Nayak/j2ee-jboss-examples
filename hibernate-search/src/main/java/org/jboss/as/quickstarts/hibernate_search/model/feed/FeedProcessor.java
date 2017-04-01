@@ -16,22 +16,21 @@
  */
 package org.jboss.as.quickstarts.hibernate_search.model.feed;
 
+import com.sun.syndication.feed.synd.SyndEntry;
+import com.sun.syndication.feed.synd.SyndFeed;
+import com.sun.syndication.io.FeedException;
+import com.sun.syndication.io.SyndFeedInput;
+import com.sun.syndication.io.XmlReader;
+import org.apache.log4j.Logger;
+import org.jboss.as.quickstarts.hibernate_search.model.data.Feed;
+import org.jboss.as.quickstarts.hibernate_search.model.data.FeedEntry;
+
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-import org.apache.log4j.Logger;
-import org.jboss.as.quickstarts.hibernate_search.model.data.Feed;
-import org.jboss.as.quickstarts.hibernate_search.model.data.FeedEntry;
-
-import com.sun.syndication.feed.synd.SyndEntry;
-import com.sun.syndication.feed.synd.SyndFeed;
-import com.sun.syndication.io.FeedException;
-import com.sun.syndication.io.SyndFeedInput;
-import com.sun.syndication.io.XmlReader;
 
 /**
  * From the feed url feed and content of the feed is extracted
@@ -58,7 +57,7 @@ public class FeedProcessor {
 
             feed = new Feed(syncFeed.getAuthor(), syncFeed.getCopyright(), syncFeed.getDescription(),
                     syncFeed.getTitle(), syncFeed.getLink(), url.toString());
-            List<FeedEntry> feedEntryList = new ArrayList<FeedEntry>();
+            List<FeedEntry> feedEntryList = new ArrayList<>();
             for (Iterator i = syncFeed.getEntries().iterator(); i.hasNext();) {
                 SyndEntry entry = (SyndEntry) i.next();
                 FeedEntry feedEntry = new FeedEntry(feed.getId(), entry.getTitle(), entry.getAuthor(),

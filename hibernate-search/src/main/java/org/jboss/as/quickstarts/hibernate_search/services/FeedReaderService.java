@@ -19,14 +19,12 @@ package org.jboss.as.quickstarts.hibernate_search.services;
 import java.util.Collection;
 import java.util.List;
 
+import javax.ws.rs.*;
+
 import org.apache.log4j.Logger;
 import org.jboss.as.quickstarts.hibernate_search.model.data.Feed;
 import org.jboss.as.quickstarts.hibernate_search.model.data.FeedEntry;
 import org.jboss.as.quickstarts.hibernate_search.model.feed.FeedService;
-
-import javax.enterprise.inject.Produces;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.Path;
 
 /**
  * Rest services are handled here

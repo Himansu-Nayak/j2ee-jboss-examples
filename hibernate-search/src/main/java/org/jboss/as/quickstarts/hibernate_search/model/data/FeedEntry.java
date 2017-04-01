@@ -19,6 +19,7 @@ package org.jboss.as.quickstarts.hibernate_search.model.data;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import org.hibernate.search.annotations.*;

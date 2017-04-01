@@ -16,12 +16,12 @@
  */
 package org.jboss.as.quickstarts.hibernate_search.model.data;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
+import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.List;
-
-import javax.xml.bind.annotation.XmlRootElement;
-
-import org.codehaus.jackson.annotate.JsonIgnore;
 
 /**
  * This entity represent the Feed

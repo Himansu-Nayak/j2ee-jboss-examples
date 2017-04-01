@@ -11,6 +11,11 @@
 	language governing permissions and limitations under the License. -->
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>j2ee-jboss-examples</artifactId>
+        <groupId>com.org.jboss</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.org.jboss</groupId>
@@ -20,6 +25,14 @@
     <name>hibernate-search</name>
     <description>hibernate-search: Demonstrates doing a full text search of your entities</description>
     <url>http://www.jboss.org/jdf/quickstarts/get-started/</url>
+
+    <repositories>
+        <repository>
+            <id>rome</id>
+            <url>http://repo.boundlessgeo.com/main/</url>
+        </repository>
+    </repositories>
+
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -210,16 +223,16 @@
 
         <!-- ROME is a set of Atom/RSS Java utilities that make it easy to work in Java with most syndication formats. -->
         <dependency>
-            <groupId>net.java.dev.rome</groupId>
+            <groupId>com.sun.syndication</groupId>
             <artifactId>rome</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>0.9</version>
         </dependency>
 
         <!-- MySql for Java -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.7</version>
+            <version>6.0.6</version>
         </dependency>
 
         <!-- Postgresql for Java-->
