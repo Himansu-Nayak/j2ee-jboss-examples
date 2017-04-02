@@ -1,12 +1,11 @@
 package com.org.hibernate.util;
 
-import java.io.File;
-
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
+
+import java.io.File;
 
 public class HibernateUtil {
     private static final String CFG_CONTEXT_PATH = "C:\\Mercury\\github\\j2ee-jboss-examples\\hibernate5\\helloworld\\src\\main\\resources\\META-INF\\";
@@ -16,7 +15,7 @@ public class HibernateUtil {
     private static SessionFactory buildSessionFactory() {
         try {
             // Create the SessionFactory from hibernate.cfg.xml
-            return new AnnotationConfiguration().configure(new File(CFG_CONTEXT_PATH + "hibernate.cfg.xml"))
+            return new Configuration().configure(new File(CFG_CONTEXT_PATH + "hibernate.cfg.xml"))
                     .buildSessionFactory();
         } catch (Throwable ex) {
             // Make sure you log the exception, as it might be swallowed

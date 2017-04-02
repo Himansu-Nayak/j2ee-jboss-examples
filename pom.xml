@@ -217,7 +217,9 @@
                 <module>hibernate3</module>
                 <module>hibernate4</module>
                 <module>hibernate5</module>
+<!--
                 <module>hibernate-search</module>
+-->
                 <module>jboss-logging</module>
                 <module>jpa</module>
                 <module>log4j-logging</module>
