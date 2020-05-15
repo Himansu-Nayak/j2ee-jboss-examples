@@ -51,7 +51,7 @@
         <version.org.hibernate>3.6.8.Final</version.org.hibernate>
         <version.org.hibernate.em>3.6.8.Final</version.org.hibernate.em>
         <version.org.hibernate.infinispan>3.6.8.Final</version.org.hibernate.infinispan>
-        <version.org.hibernate.validator>3.1.0.GA</version.org.hibernate.validator>
+        <version.org.hibernate.validator>6.0.18.Final</version.org.hibernate.validator>
 
         <!-- other plugin versions -->
         <version.war.plugin>2.6</version.war.plugin>
